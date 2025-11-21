@@ -1,0 +1,70 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{project.projectName}}</h5>
+        <p class="card-text">{{project.description}}</p>
+        <button type="button" class="btn btn-primary" (click)="getProject(project.id)">View details</button>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex flex-wrap justify-content-center">
+            <div *ngFor="let item of project.tags">
+                <div class="tag me-1 mb-1" [style.background-color]="item.color">{{item}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" [class.show]="showModal" [style.display]="showModal ? 'block' : 'none'" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ selectedProject?.projectName }}</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="selectedProject">
+          <div id="projectCarousel" class="carousel slide mb-4">
+            <div class="carousel-inner">
+              <div *ngFor="let picture of selectedProject.pictures; let i = index" 
+                   class="carousel-item" 
+                   [class.active]="i === currentSlideIndex">
+                <img [src]="picture" class="d-block w-100" alt="Project screenshot">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" (click)="previousSlide()">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" (click)="nextSlide()">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+              <button *ngFor="let picture of selectedProject.pictures; let i = index"
+                      type="button"
+                      [class.active]="i === currentSlideIndex"
+                      (click)="goToSlide(i)">
+              </button>
+            </div>
+          </div>
+          <div class="project-details">
+            <h6>Summary</h6>
+            <p>{{ selectedProject.summary }}</p>
+            
+            <h6>Description</h6>
+            <p>{{ selectedProject.description }}</p>
+            
+            <h6>Tags</h6>
+            <div class="tags">
+              <span *ngFor="let tag of selectedProject.tags" class="badge bg-secondary me-1">
+                {{ tag }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,7 @@
+a:hover .linkedin-icon {
+    animation: fa-shake 1s infinite;
+}
+
+a:hover .git-icon {
+    animation: fa-flip 1s infinite;
+}

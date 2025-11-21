@@ -1,0 +1,79 @@
+/* Resume Accordion Styling */
+.accordion {
+    border-radius: 12px;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.accordion-button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-body {
+    padding: 22px;
+    background: #fafafa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Headings */
+.accordion-body h1,
+.accordion-body h2,
+.accordion-body h6 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Skill Badges */
+.badge {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    margin: 4px 4px 10px 0;
+    border-radius: 30px;
+}
+
+/* Experience heading */
+.accordion-body h1 {
+    font-size: 1.4rem;
+    color: #343a40;
+}
+
+/* Education section styling */
+#collapseThree h2, 
+#collapseThree h3 {
+    margin: 15px 20px 0 20px;
+    padding-top: 10px;
+}
+
+#collapseThree h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#collapseThree h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Button Styling */
+button.btn-primary {
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}

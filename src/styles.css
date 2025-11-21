@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+.container{
+    max-width: 1140px;
+}
+.badge{
+    margin-left: 10px;
+}
+
+body {
+    background-color: #ffffff;   /* pick your color */
+    margin: 0;
+    padding: 0;
+}
