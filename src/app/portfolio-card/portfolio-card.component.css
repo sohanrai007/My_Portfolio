@@ -12,3 +12,17 @@
   user-select: none;
   color: white;
 }
+
+.custom-card .card-body{ padding: 1rem }
+.custom-card .card-title{ color: var(--text); margin-bottom: 0.4rem }
+.custom-card .card-text{ color: var(--muted); }
+
+.tag{ background: var(--accent); color:#fff; border:none }
+.tag[style]{ /* if color is passed inline, prefer that for uniqueness */ }
+
+.custom-card img{ display:block; width:100%; height:auto }
+
+.custom-card .card-footer{ background: transparent; border-top: 1px solid rgba(255,255,255,0.02); }
+
+.custom-card{ transition: transform .18s ease, box-shadow .18s ease }
+.custom-card:hover{ transform: translateY(-6px); box-shadow: 0 14px 40px rgba(2,6,23,0.75) }

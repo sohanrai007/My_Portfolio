@@ -1,3 +1,11 @@
 .card-width{
-    min-width: 380px; max-width: 380px;
+        width: 100%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+    .card-width { max-width: 100%; padding: 0 8px; }
 }

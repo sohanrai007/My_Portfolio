@@ -1,0 +1,32 @@
+/* Styles for the home panels to fit the dark page background and ensure good contrast */
+.home-panel{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background-color: var(--card);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  color: var(--text);
+  padding: 1.15rem 0.75rem;
+  box-sizing: border-box;
+}
+
+.home-panel h2, .home-panel h1, .home-panel h3{ color: var(--text); margin-top: 0.25rem }
+.home-panel p{ color: var(--muted); }
+
+.profile-photo{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.55);
+  margin: 0.6rem auto;
+  display: block;
+}
+
+/* Make carousel images visually consistent inside the panel */
+.home-panel .carousel .carousel-item img{ border-radius: 8px; max-height: 420px; object-fit: cover }
+
+@media (max-width: 768px){
+  .home-panel{ padding: 0.9rem }
+  .profile-photo{ width: 128px; height: 128px }
+}
